@@ -1,0 +1,2 @@
+module StraightPBox()
+endmodule
