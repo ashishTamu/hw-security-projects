@@ -1,4 +1,4 @@
-/*
+/* 
  * Inverse permutation look up table implementation 
  * for DES encryption algorithm
  * output is based on lookup table
