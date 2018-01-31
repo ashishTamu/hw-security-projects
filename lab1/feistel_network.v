@@ -29,4 +29,5 @@ module FeistelNetwork(wOutputData,wInputData,wKey);
    StraightPBox straight_p_box(wOutputData,wSBoxOutput);
      
 
-endmodule
+endmodule // FeistelNetwork
+
