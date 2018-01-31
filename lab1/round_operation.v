@@ -11,10 +11,12 @@ module RoundOperation(wOutputData,wInputData,wKey);
    output wire [63:0] wOutputData;
    wire [31:0] 	      wFeistelOut;
    
-
-   assign wOutputData[63:32] = wInputData[31:0];
-   FeistelNetwork fn(wFeistelOut, wInputData[31:0]);
-   assign wOutputData[31:0] = wFeistelOut^wInputData[63:32];
+   always @* 
+     begin
+	assign wOutputData[63:32] = wInputData[31:0];
+	FeistelNetwork fn(wFeistelOut, wInputData[31:0]);
+	assign wOutputData[31:0] = wFeistelOut^wInputData[63:32];
+     end
    
 endmodule // RoundOperation
 
