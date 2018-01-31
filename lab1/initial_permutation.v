@@ -1,2 +1,2 @@
 module InitialPermutation();
-endmodule
+endmodule // InitialPermutation

@@ -20,7 +20,6 @@ module FinalPermutation (rOutputData,wInputData);
 	     assign rOutputData[(i*8)+7:(i*8)]=  {wInputData[40-i],wInputData[8-i],wInputData[48-i],wInputData[16-i],wInputData[56-i],wInputData[24-i],wInputData[64-i],wInputData[32-i]};
 	  end
      end
-   
 	
 endmodule // FinalPermutation
 
