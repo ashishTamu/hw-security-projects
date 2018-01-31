@@ -1,2 +1,4 @@
-module Decryption()
-endmodule
+module Decryption();
+   
+endmodule // Decryption
+
