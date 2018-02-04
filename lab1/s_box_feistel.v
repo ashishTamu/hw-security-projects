@@ -7,19 +7,19 @@
 module SBox(wOutputData, wInputData);
    
    //input is 48 bit
-   input wire [47:0] wInputData ;
+   input wire [1:48] wInputData ;
    //output is 32 bit
-   output wire[31:0] wOutputData ;
+   output wire[1:32] wOutputData ;
 //always @*
 //begin
-   S1Box s1box (wOutputData[3:0], wInputData[5:0]);
-   S2Box s2box (wOutputData[7:4], wInputData[11:6]);
-   S3Box s3box (wOutputData[11:8], wInputData[17:12]);
-   S4Box s4box (wOutputData[15:12], wInputData[23:18]);
-   S5Box s5box (wOutputData[19:16], wInputData[29:24]);
-   S6Box s6box (wOutputData[23:20], wInputData[35:30]);
-   S7Box s7box (wOutputData[27:24], wInputData[41:36]);
-   S8Box s8box (wOutputData[31:28], wInputData[47:42]);
+   S1Box s1box (wOutputData[1:4], wInputData[1:6]);
+   S2Box s2box (wOutputData[5:8], wInputData[7:12]);
+   S3Box s3box (wOutputData[9:12], wInputData[13:18]);
+   S4Box s4box (wOutputData[13:16], wInputData[19:24]);
+   S5Box s5box (wOutputData[17:20], wInputData[25:30]);
+   S6Box s6box (wOutputData[21:24], wInputData[31:36]);
+   S7Box s7box (wOutputData[25:28], wInputData[37:42]);
+   S8Box s8box (wOutputData[29:32], wInputData[43:48]);
   // end
 endmodule // SBox
 

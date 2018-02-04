@@ -6,14 +6,14 @@
 
 module S3Box(wOutputData, wInputData);
    
-   input wire [5:0] wInputData ;
-   output reg [3:0] wOutputData ;
+   input wire [0:5] wInputData ;
+   output reg [0:3] wOutputData ;
    always @*
      begin
-	case ({wInputData[5],wInputData[0]})
+	case ({wInputData[0],wInputData[5]})
 	  2'b00 :
 	    begin
-	       case (wInputData[4:1])
+	       case (wInputData[1:4])
 		 4'h0: wOutputData <= 4'hA;
 		 4'h1: wOutputData <= 4'h0;
 		 4'h2: wOutputData <= 4'h9;
@@ -31,12 +31,12 @@ module S3Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'h2;
 		 4'hF: wOutputData <= 4'h8;
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case (wInputData[4:1])
+	       endcase // case (wInputData[1:4])
 	    end // case: 2'b00
 
 	  2'b01 :
 	    begin
-	       case (wInputData[4:1])
+	       case (wInputData[1:4])
 		 4'h0: wOutputData <= 4'hD;
 		 4'h1: wOutputData <= 4'h7;
 		 4'h2: wOutputData <= 4'h0;
@@ -54,12 +54,12 @@ module S3Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'hF;
 		 4'hF: wOutputData <= 4'h1;
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case (wInputData[4:1])	  
+	       endcase // case (wInputData[1:4])	  
 	    end // case: 2'b01
 	  
 	  2'b10 :
 	    begin
-	       case (wInputData[4:1])
+	       case (wInputData[1:4])
 		 4'h0: wOutputData <= 4'hD;
 		 4'h1: wOutputData <= 4'h6;
 		 4'h2: wOutputData <= 4'h4;
@@ -77,12 +77,12 @@ module S3Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'hE;
 		 4'hF: wOutputData <= 4'h7;	    	    
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case (wInputData[4:1])	  
+	       endcase // case (wInputData[1:4])	  
 	    end // case: 2'b10
 
 	  2'b11 :
 	    begin
-	       case (wInputData[4:1])
+	       case (wInputData[1:4])
 		 4'h0: wOutputData <= 4'h1;
 		 4'h1: wOutputData <= 4'hA;
 		 4'h2: wOutputData <= 4'hD;
@@ -100,7 +100,7 @@ module S3Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'h2;
 		 4'hF: wOutputData <= 4'hC;
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case (wInputData[4:1])
+	       endcase // case (wInputData[1:4])
 	    end // case: 2'b11
 	endcase // case ({wInputData[5],wInputData[0]})
      end // always @ *

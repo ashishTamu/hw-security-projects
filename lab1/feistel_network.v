@@ -6,13 +6,13 @@
 
 module FeistelNetwork(wOutputData,wInputData,wKey);
    
-   input wire [47:0] wKey;
-   input wire [31:0] wInputData;
-   output wire [31:0] wOutputData;
+   input wire [1:48] wKey;
+   input wire [1:32] wInputData;
+   output wire [1:32] wOutputData;
 
-   wire [47:0] 	     wExpansionOut;
-   reg [47:0] 	     wSBoxInput;
-   wire [31:0] 	     wSBoxOutput;
+   wire [1:48] 	     wExpansionOut;
+   reg [1:48] 	     wSBoxInput;
+   wire [1:32] 	     wSBoxOutput;
   
  // First layer: expansion box
    ExpansionBox e_box(wExpansionOut,wInputData);

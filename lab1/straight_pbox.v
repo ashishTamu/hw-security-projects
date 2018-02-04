@@ -7,9 +7,9 @@
 module StraightPBox(wOutputData, wInputData);
 
    //input is 32 bit
-   input wire [31:0] wInputData ;
+   input wire [0:31] wInputData ;
    //output is 32 bit
-   output reg [31:0] wOutputData ;
+   output reg [0:31] wOutputData ;
 always @*
 begin
     wOutputData[0] <= wInputData[15];

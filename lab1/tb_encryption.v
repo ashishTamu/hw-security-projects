@@ -7,7 +7,7 @@
 module DESTestBench_v;
 
 		task passTest;
-		input [63:0] actualOut, expectedOut;
+		input [1:64] actualOut, expectedOut;
 		input [`STRLEN*8:0] testType;
 		inout [7:0] passed;
 	
@@ -25,14 +25,14 @@ module DESTestBench_v;
 
 	// Inputs
 	
-	reg [63:0] plainText;
-	reg [63:0] key;
+	reg [1:64] plainText;
+	reg [1:64] key;
 	reg [7:0] passed;
 
 
 	// Outputs
 	
-	wire [63:0] cipherText;
+	wire [1:64] cipherText;
 
 	//book keeping
 

@@ -5,9 +5,9 @@
 
 module ExpansionBox(rOutputData,wInputData);
    //input is 32 bit
-   input wire [32:1] wInputData ;
+   input wire [1:32] wInputData ;
    //output is 48 bit
-   output reg [48:1] rOutputData ;
+   output reg [1:48] rOutputData ;
 
 
    //Look up table

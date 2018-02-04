@@ -24,41 +24,41 @@ module RoundKeyGenerator(roundKey1,
 			 inputKey
 			 );
    
-   output wire[47:0] roundKey1;
-   output wire[47:0] roundKey2;
-   output wire[47:0] roundKey3;
-   output wire[47:0] roundKey4;
-   output wire[47:0] roundKey5;
-   output wire[47:0] roundKey6;
-   output wire[47:0] roundKey7;
-   output wire[47:0] roundKey8;
-   output wire[47:0] roundKey9;
-   output wire[47:0] roundKey10;
-   output wire[47:0] roundKey11;
-   output wire[47:0] roundKey12;
-   output wire[47:0] roundKey13;
-   output wire[47:0] roundKey14;
-   output wire[47:0] roundKey15;
-   output wire[47:0] roundKey16;
-   input wire [63:0] inputKey;
+   output wire[1:48] roundKey1;
+   output wire[1:48] roundKey2;
+   output wire[1:48] roundKey3;
+   output wire[1:48] roundKey4;
+   output wire[1:48] roundKey5;
+   output wire[1:48] roundKey6;
+   output wire[1:48] roundKey7;
+   output wire[1:48] roundKey8;
+   output wire[1:48] roundKey9;
+   output wire[1:48] roundKey10;
+   output wire[1:48] roundKey11;
+   output wire[1:48] roundKey12;
+   output wire[1:48] roundKey13;
+   output wire[1:48] roundKey14;
+   output wire[1:48] roundKey15;
+   output wire[1:48] roundKey16;
+   input wire [1:64] inputKey;
 
-   wire [55:0] 	     wPC1Key;
-   reg [55:0] 	     wShiftedRoundKey1;
-   reg [55:0] 	     wShiftedRoundKey2;
-   reg [55:0] 	     wShiftedRoundKey3;
-   reg [55:0] 	     wShiftedRoundKey4;
-   reg [55:0] 	     wShiftedRoundKey5;
-   reg [55:0] 	     wShiftedRoundKey6;
-   reg [55:0] 	     wShiftedRoundKey7;
-   reg [55:0] 	     wShiftedRoundKey8;
-   reg [55:0] 	     wShiftedRoundKey9;
-   reg [55:0] 	     wShiftedRoundKey10;
-   reg [55:0] 	     wShiftedRoundKey11;
-   reg [55:0] 	     wShiftedRoundKey12;
-   reg [55:0] 	     wShiftedRoundKey13;
-   reg [55:0] 	     wShiftedRoundKey14;
-   reg [55:0] 	     wShiftedRoundKey15;
-   reg [55:0] 	     wShiftedRoundKey16;
+   wire [1:56] 	     wPC1Key;
+   reg [1:56] 	     wShiftedRoundKey1;
+   reg [1:56] 	     wShiftedRoundKey2;
+   reg [1:56] 	     wShiftedRoundKey3;
+   reg [1:56] 	     wShiftedRoundKey4;
+   reg [1:56] 	     wShiftedRoundKey5;
+   reg [1:56] 	     wShiftedRoundKey6;
+   reg [1:56] 	     wShiftedRoundKey7;
+   reg [1:56] 	     wShiftedRoundKey8;
+   reg [1:56] 	     wShiftedRoundKey9;
+   reg [1:56] 	     wShiftedRoundKey10;
+   reg [1:56] 	     wShiftedRoundKey11;
+   reg [1:56] 	     wShiftedRoundKey12;
+   reg [1:56] 	     wShiftedRoundKey13;
+   reg [1:56] 	     wShiftedRoundKey14;
+   reg [1:56] 	     wShiftedRoundKey15;
+   reg [1:56] 	     wShiftedRoundKey16;
    
 
    //keyexpansion permutation1
@@ -107,52 +107,52 @@ module RoundKeyGenerator(roundKey1,
 always @*
 begin	
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey1 <= {wPC1Key[54:28],wPC1Key[55],wPC1Key[26:0],wPC1Key[27]};
+    wShiftedRoundKey1 <= {wPC1Key[30:56],wPC1Key[29],wPC1Key[2:28],wPC1Key[1]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey2 <= {wShiftedRoundKey1[54:28],wShiftedRoundKey1[55],wShiftedRoundKey1[26:0],wShiftedRoundKey1[27]};
+    wShiftedRoundKey2 <= {wShiftedRoundKey1[30:56],wShiftedRoundKey1[29],wShiftedRoundKey1[2:28],wShiftedRoundKey1[1]};
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey3 <= {wShiftedRoundKey2[53:28],wShiftedRoundKey2[55:54],wShiftedRoundKey2[25:0],wShiftedRoundKey2[27:26]};
+    wShiftedRoundKey3 <= {wShiftedRoundKey2[31:56],wShiftedRoundKey2[29:30],wShiftedRoundKey2[3:28],wShiftedRoundKey2[1:2]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey4 <= {wShiftedRoundKey3[53:28],wShiftedRoundKey3[55:54],wShiftedRoundKey3[25:0],wShiftedRoundKey3[27:26]};
+    wShiftedRoundKey4 <= {wShiftedRoundKey3[31:56],wShiftedRoundKey3[29:30],wShiftedRoundKey3[3:28],wShiftedRoundKey3[1:2]};
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey5 <= {wShiftedRoundKey4[53:28],wShiftedRoundKey4[55:54],wShiftedRoundKey4[25:0],wShiftedRoundKey4[27:26]};
+    wShiftedRoundKey5 <= {wShiftedRoundKey4[31:56],wShiftedRoundKey4[29:30],wShiftedRoundKey4[3:28],wShiftedRoundKey4[1:2]};
     //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey6 <= {wShiftedRoundKey5[53:28],wShiftedRoundKey5[55:54],wShiftedRoundKey5[25:0],wShiftedRoundKey5[27:26]};
+    wShiftedRoundKey6 <= {wShiftedRoundKey5[31:56],wShiftedRoundKey5[29:30],wShiftedRoundKey5[3:28],wShiftedRoundKey5[1:2]};
 
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey7 <= {wShiftedRoundKey6[53:28],wShiftedRoundKey6[55:54],wShiftedRoundKey6[25:0],wShiftedRoundKey6[27:26]};
+    wShiftedRoundKey7 <= {wShiftedRoundKey6[31:56],wShiftedRoundKey6[29:30],wShiftedRoundKey6[3:28],wShiftedRoundKey6[1:2]};
   
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey8 <= {wShiftedRoundKey7[53:28],wShiftedRoundKey7[55:54],wShiftedRoundKey7[25:0],wShiftedRoundKey7[27:26]};
+    wShiftedRoundKey8 <= {wShiftedRoundKey7[31:56],wShiftedRoundKey7[29:30],wShiftedRoundKey7[3:28],wShiftedRoundKey7[1:2]};
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey9 <= {wShiftedRoundKey8[54:28],wShiftedRoundKey8[55],wShiftedRoundKey8[26:0],wShiftedRoundKey8[27]};
+    wShiftedRoundKey9 <= {wShiftedRoundKey8[30:56],wShiftedRoundKey8[29],wShiftedRoundKey8[2:28],wShiftedRoundKey8[1]};
   
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey10 <= {wShiftedRoundKey9[53:28],wShiftedRoundKey9[55:54],wShiftedRoundKey9[25:0],wShiftedRoundKey9[27:26]};
+    wShiftedRoundKey10 <= {wShiftedRoundKey9[31:56],wShiftedRoundKey9[29:30],wShiftedRoundKey9[3:28],wShiftedRoundKey9[1:2]};
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey11 <= {wShiftedRoundKey10[53:28],wShiftedRoundKey10[55:54],wShiftedRoundKey10[25:0],wShiftedRoundKey10[27:26]};
+    wShiftedRoundKey11 <= {wShiftedRoundKey10[31:56],wShiftedRoundKey10[29:30],wShiftedRoundKey10[3:28],wShiftedRoundKey10[1:2]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey12 <= {wShiftedRoundKey11[53:28],wShiftedRoundKey11[55:54],wShiftedRoundKey11[25:0],wShiftedRoundKey11[27:26]};
+    wShiftedRoundKey12 <= {wShiftedRoundKey11[31:56],wShiftedRoundKey11[29:30],wShiftedRoundKey11[3:28],wShiftedRoundKey11[1:2]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey13 <= {wShiftedRoundKey12[53:28],wShiftedRoundKey12[55:54],wShiftedRoundKey12[25:0],wShiftedRoundKey12[27:26]};
+    wShiftedRoundKey13 <= {wShiftedRoundKey12[31:56],wShiftedRoundKey12[29:30],wShiftedRoundKey12[3:28],wShiftedRoundKey12[1:2]};
 
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey14 <= {wShiftedRoundKey13[53:28],wShiftedRoundKey13[55:54],wShiftedRoundKey13[25:0],wShiftedRoundKey13[27:26]};
+    wShiftedRoundKey14 <= {wShiftedRoundKey13[31:56],wShiftedRoundKey13[29:30],wShiftedRoundKey13[3:28],wShiftedRoundKey13[1:2]};
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey15 <= {wShiftedRoundKey14[53:28],wShiftedRoundKey14[55:54],wShiftedRoundKey14[25:0],wShiftedRoundKey14[27:26]};
+    wShiftedRoundKey15 <= {wShiftedRoundKey14[31:56],wShiftedRoundKey14[29:30],wShiftedRoundKey14[3:28],wShiftedRoundKey14[1:2]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey16 <= {wShiftedRoundKey15[54:28],wShiftedRoundKey15[55],wShiftedRoundKey15[26:0],wShiftedRoundKey15[27]};
+    wShiftedRoundKey16 <= {wShiftedRoundKey15[30:56],wShiftedRoundKey15[29],wShiftedRoundKey15[2:28],wShiftedRoundKey15[1]};
    end
 endmodule // RoundKeyGenerator
 
