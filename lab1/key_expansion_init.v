@@ -1,12 +1,12 @@
-module KeyExpansionPermChoice1(wOutputData, wInputData);
+module KeyExpansionPermChoice1(wOutputData, InputData);
 
    //input is 32 bit
-   input wire [64:1] wInputData ;
+   input wire [64:1] InputData ;
    //output is 32 bit
    output reg [56:1] wOutputData ;
    
-   //wire [64:1] wInputData ;
-   
+   wire [1:64] wInputData ;
+   assign wInputData = InputData[64:1];
  /*
     assign wInputData[8:1]   = {InputData[7]^InputData[6]^InputData[5]^InputData[4]^InputData[3]^InputData[2]^InputData[1]^1'b1,InputData[7:1]};
     assign wInputData[16:9]  = {InputData[14]^InputData[13]^InputData[12]^InputData[11]^InputData[10]^InputData[9]^InputData[8]^1'b1,InputData[14:8]};
@@ -27,14 +27,15 @@ module KeyExpansionPermChoice1(wOutputData, wInputData);
  wOutputData[5] <= wInputData[25];
  wOutputData[6] <= wInputData[17];
  wOutputData[7] <= wInputData[9];
+ 
  wOutputData[8] <= wInputData[1];
-
  wOutputData[9] <= wInputData[58];
  wOutputData[10] <= wInputData[50];
  wOutputData[11] <= wInputData[42];
  wOutputData[12] <= wInputData[34];
  wOutputData[13] <= wInputData[26];
  wOutputData[14] <= wInputData[18];
+ 
  wOutputData[15] <= wInputData[10];
  wOutputData[16] <= wInputData[2];
  wOutputData[17] <= wInputData[59];
@@ -42,10 +43,10 @@ module KeyExpansionPermChoice1(wOutputData, wInputData);
  wOutputData[19] <= wInputData[43];
  wOutputData[20] <= wInputData[35];
  wOutputData[21] <= wInputData[27];
+ 
  wOutputData[22] <= wInputData[19];
  wOutputData[23] <= wInputData[11];
  wOutputData[24] <= wInputData[3];
- 
  wOutputData[25] <= wInputData[60];
  wOutputData[26] <= wInputData[52];
  wOutputData[27] <= wInputData[44];
