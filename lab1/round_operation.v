@@ -13,7 +13,7 @@ module RoundOperation(wOutputData,wInputData,wKey);
    
 
 	assign wOutputData[63:32] = wInputData[31:0];
-	FeistelNetwork fn(wFeistelOut, wInputData[31:0]);
+	FeistelNetwork fn(wFeistelOut, wInputData[31:0],wKey);
 	assign wOutputData[31:0] = wFeistelOut^wInputData[63:32];
   
    

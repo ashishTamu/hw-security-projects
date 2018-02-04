@@ -46,7 +46,8 @@ module Encryption(cipherData,plainText,key);
    wire [47:0] 	     wKey15;
    wire [47:0] 	     wKey16;
    
-   
+   //always @*
+	//begin
    InitialPermutation initial_perm(wInitialPermOut,plainText);
    RoundKeyGenerator rkg(wKey1,
 			 wKey2,
@@ -83,6 +84,6 @@ module Encryption(cipherData,plainText,key);
    RoundOperation round15( wRound15Out,wRound14Out,wKey15);
    RoundOperation round16( wRound16Out,wRound15Out,wKey16);
    FinalPermutation final_perm(cipherText,wRound16Out);
-   
+   //end
 endmodule // Encryption
 

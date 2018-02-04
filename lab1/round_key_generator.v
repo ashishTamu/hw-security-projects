@@ -62,7 +62,7 @@ module RoundKeyGenerator(roundKey1,
    
   
    //keyexpansion permutation1
-   KeyExpansionPermChoice1 key_pc_init(wPC1Key,key);
+   KeyExpansionPermChoice1 key_pc_init(wPC1Key,inputKey);
    
    //Shift operations by 1 for 1 2 9 16 else 2 
    assign wShiftedRoundKey1 = {wPC1Key[26:0],wPC1Key[27]};
