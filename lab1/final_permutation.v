@@ -8,7 +8,7 @@ module FinalPermutation (rOutputData,wInputData);
    //input is 64 bit
    input wire [64:1] wInputData ;
    //output is 64 bit
-   output reg  [64:1] rOutputData ;
+   output wire  [64:1] rOutputData ;
    
    //Look up table
 assign rOutputData[1] = wInputData[40];

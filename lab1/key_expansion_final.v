@@ -1,7 +1,7 @@
 module KeyExpansionPermChoice2(wOutputData, wInputData);
    
 
-   input wire [48:1] wInputData ;
+   input wire [56:1] wInputData ;
    
    output wire [48:1] wOutputData ;
 

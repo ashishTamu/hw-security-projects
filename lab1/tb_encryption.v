@@ -26,7 +26,7 @@ module DESTestBench_v;
 	// Inputs
 	
 	reg [63:0] plainText;
-	reg [63:0] key;
+	reg [55:0] key;
 	reg [7:0] passed;
 
 
@@ -57,7 +57,7 @@ module DESTestBench_v;
 		key=56'h000000000000000;
 		plainText=64'hAAAAAAAAAAAAAAAA;
 		#50
-		passTest(plainText, 64'h3AE716954DC04E25, "Results of Program 1", passed);
+		passTest(cipherText, 64'h3AE716954DC04E25, "Results of Program 1", passed);
 		
 		#50;
 		allPassed(passed, 1);

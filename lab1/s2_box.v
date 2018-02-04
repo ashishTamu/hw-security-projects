@@ -16,7 +16,7 @@ module S2Box(wOutputData, wInputData);
 	case ({wInputData[5],wInputData[0]})
 	  2'b00 :
 	    begin
-	       case (wInputData[10:7])
+	       case (wInputData[4:1])
 		 4'h0: wOutputData <= 4'hF;
 		 4'h1: wOutputData <= 4'h1;
 		 4'h2: wOutputData <= 4'h8;
