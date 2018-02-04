@@ -40,7 +40,7 @@ module RoundKeyGenerator(roundKey1,
    output wire[47:0] roundKey14;
    output wire[47:0] roundKey15;
    output wire[47:0] roundKey16;
-   input wire [55:0] inputKey;
+   input wire [63:0] inputKey;
 
    wire [55:0] 	     wPC1Key;
    reg [55:0] 	     wShiftedRoundKey1;

@@ -9,7 +9,7 @@ module Encryption(cipherData,plainText,key);
    
 
    input wire [63:0] plainText;
-   input wire [55:0] key;
+   input wire [63:0] key;
    output wire [63:0] cipherData;
 
    wire [63:0] 	     wInitialPermOut;

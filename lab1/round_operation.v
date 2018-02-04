@@ -12,7 +12,7 @@ module RoundOperation(wOutputData,wInputData,wKey);
    wire [31:0] 	      wFeistelOut;
    
 	FeistelNetwork fn(wFeistelOut, wInputData[31:0],wKey);
-always @(wInputData)
+always @*
 begin
 	 wOutputData[63:32] <= wInputData[31:0];
 	 wOutputData[31:0] <= wFeistelOut^wInputData[63:32];

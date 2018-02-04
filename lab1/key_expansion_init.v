@@ -1,13 +1,13 @@
-module KeyExpansionPermChoice1(wOutputData, InputData);
+module KeyExpansionPermChoice1(wOutputData, wInputData);
 
    //input is 32 bit
-   input wire [56:1] InputData ;
+   input wire [64:1] wInputData ;
    //output is 32 bit
    output reg [56:1] wOutputData ;
    
-   wire [64:1] wInputData ;
+   //wire [64:1] wInputData ;
    
- 
+ /*
     assign wInputData[8:1]   = {InputData[7]^InputData[6]^InputData[5]^InputData[4]^InputData[3]^InputData[2]^InputData[1]^1'b1,InputData[7:1]};
     assign wInputData[16:9]  = {InputData[14]^InputData[13]^InputData[12]^InputData[11]^InputData[10]^InputData[9]^InputData[8]^1'b1,InputData[14:8]};
     assign wInputData[24:17] = {InputData[21]^InputData[20]^InputData[19]^InputData[18]^InputData[17]^InputData[16]^InputData[15]^1'b1,InputData[21:15]};
@@ -16,7 +16,7 @@ module KeyExpansionPermChoice1(wOutputData, InputData);
     assign wInputData[48:41] = {InputData[42]^InputData[41]^InputData[40]^InputData[39]^InputData[38]^InputData[37]^InputData[36]^1'b1,InputData[42:36]};
     assign wInputData[56:49] = {InputData[49]^InputData[48]^InputData[47]^InputData[46]^InputData[45]^InputData[44]^InputData[43]^1'b1,InputData[49:43]};
     assign wInputData[64:57] = {InputData[56]^InputData[55]^InputData[54]^InputData[53]^InputData[52]^InputData[51]^InputData[50]^1'b1,InputData[56:50]};
-	 
+	*/ 
    always @*
    begin
 
