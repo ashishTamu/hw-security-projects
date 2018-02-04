@@ -9,7 +9,7 @@ module S2Box(wOutputData, wInputData);
    //input is 6 bit
    input wire [5:0] wInputData ;
    //output is 4 bit
-   output wire [3:0] wOutputData ;
+   output reg [3:0] wOutputData ;
    always @*
      begin
 	

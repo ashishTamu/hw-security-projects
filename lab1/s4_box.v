@@ -7,7 +7,7 @@
 module S4Box(wOutputData, wInputData);
    
    input wire [5:0] wInputData ;
-   output wire [3:0] wOutputData ;
+   output reg [3:0] wOutputData ;
 
    always @*
      begin
