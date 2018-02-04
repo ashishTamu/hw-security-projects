@@ -6,6 +6,15 @@ module KeyExpansionPermChoice1(wOutputData, InputData);
    output wire [56:1] wOutputData ;
    
    wire [64:1] wInputData ;
+   
+   assign wInputData[8:1]   = {InputData[7:1],inputData[7]^InputData[6]^InputData[5]^InputData[4]^InputData[3]^InputData[2]^InputData[1]};
+   assign wInputData[16:9]  = {InputData[14:8],inputData[14]^InputData[13]^InputData[12]^InputData[11]^InputData[10]^InputData[9]^InputData[8]};
+   assign wInputData[24:17] = {InputData[21:15],inputData[21]^InputData[20]^InputData[19]^InputData[18]^InputData[17]^InputData[16]^InputData[15]};
+   assign wInputData[32:25] = {InputData[28:22],inputData[28]^InputData[27]^InputData[26]^InputData[25]^InputData[24]^InputData[23]^InputData[22]};
+   assign wInputData[40:33] = {InputData[35:29],inputData[35]^InputData[34]^InputData[33]^InputData[32]^InputData[31]^InputData[30]^InputData[29]};
+   assign wInputData[48:41] = {InputData[42:36],inputData[42]^InputData[41]^InputData[40]^InputData[39]^InputData[38]^InputData[37]^InputData[36]};
+   assign wInputData[56:49] = {InputData[49:43],inputData[49]^InputData[48]^InputData[47]^InputData[46]^InputData[45]^InputData[44]^InputData[43]};
+   assign wInputData[64:57] = {InputData[56:50],inputData[56]^InputData[55]^InputData[54]^InputData[53]^InputData[52]^InputData[51]^InputData[50]};
 	
 assign wOutputData[1] = wInputData[57];
 assign wOutputData[2] = wInputData[49];
@@ -33,7 +42,7 @@ assign wOutputData[22] = wInputData[19];
 assign wOutputData[23] = wInputData[11];
 assign wOutputData[24] = wInputData[3];
  
- assign wOutputData[25] = wInputData[60];
+assign wOutputData[25] = wInputData[60];
 assign wOutputData[26] = wInputData[52];
 assign wOutputData[27] = wInputData[44];
 assign wOutputData[28] = wInputData[36];
@@ -50,7 +59,7 @@ assign wOutputData[38] = wInputData[54];
 assign wOutputData[39] = wInputData[46];
 assign wOutputData[40] = wInputData[38];
  
- assign wOutputData[41] = wInputData[30];
+assign wOutputData[41] = wInputData[30];
 assign wOutputData[42] = wInputData[22];
 assign wOutputData[43] = wInputData[14];
 assign wOutputData[44] = wInputData[6];
