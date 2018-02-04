@@ -46,8 +46,7 @@ module DESTestBench_v;
 	Encryption uut1 (
 		cipherText, 
 		plainText,
-		key)
-	);
+		key);
 
 	initial begin
 		// Initialize Inputs

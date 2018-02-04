@@ -7,7 +7,7 @@ module InitialPermutation(rOutputData,wInputData);
    input wire [`BUSLEN:1] wInputData ;
 
    //output is 64 bit
-   output reg  [`BUSLEN:1] rOutputData ;
+   output wire  [`BUSLEN:1] rOutputData ;
 
 
 assign rOutputData[1] = wInputData[58];
