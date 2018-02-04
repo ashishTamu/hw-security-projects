@@ -15,7 +15,7 @@ module ExpansionBox(rOutputData,wInputData);
 
    always @*
      begin
-	for (i=0;i<6;i++)
+	for (i=0;i<6;i=i+1)
 	  begin
 	     rOutputData[i] <= wInputData[(31+i)%32];
 	     rOutputData[i+6] <= wInputData[3+i];	

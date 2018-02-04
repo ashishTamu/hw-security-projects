@@ -15,7 +15,7 @@ module FinalPermutation (rOutputData,wInputData);
    integer 		   i;
    always @*
      begin
-	for (i=0;i <(`BUSLEN+1)/8;i++)
+	for (i=0;i <(`BUSLEN+1)/8;i=i+1)
 	  begin
 	    rOutputData[(i*8)+7:(i*8)] <=  {wInputData[40-i],wInputData[8-i],wInputData[48-i],wInputData[16-i],wInputData[56-i],wInputData[24-i],wInputData[64-i],wInputData[32-i]};
 	  end
