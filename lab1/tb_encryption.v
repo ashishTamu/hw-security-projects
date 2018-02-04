@@ -39,7 +39,7 @@ module DESTestBench_v;
 	initial begin
 		plainText=0;
 		key=0;
-		plainTextAfterDecryption=0;
+		
 	end
 	
 	// Instantiate the Unit Under Test (UUT)
