@@ -33,6 +33,7 @@ module DESTestBench_v;
 	// Outputs
 	
 	wire [1:64] cipherText;
+	wire [1:64] plainTextAfterDecryption;
 
 	//book keeping
 
@@ -47,7 +48,10 @@ module DESTestBench_v;
 		cipherText, 
 		plainText,
 		key);
-
+	Decryption uut2 (
+		plainTextAfterDecryption, 
+		cipherText,
+		key);
 	initial begin
 		// Initialize Inputs
 		passed = 0;
@@ -57,10 +61,14 @@ module DESTestBench_v;
 		key=64'h133457799BBCDFF1;
 		plainText=64'h0123456789ABCDEF;
 		#50
-		passTest(cipherText, 64'h85E813540F0AB405, "Results of Program 1", passed);
+		passTest(cipherText, 64'h85E813540F0AB405, "Results of Encryption 1", passed);
 		
 		#50;
-		allPassed(passed, 1);
+
+		passTest(plainTextAfterDecryption, 64'h0123456789ABCDEF, "Results of Decryption 1", passed);
+		
+		#50;
+		allPassed(passed, 2);
 		$finish;
 	end
 	
