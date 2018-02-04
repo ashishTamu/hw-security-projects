@@ -16,7 +16,7 @@ module S2Box(wOutputData, wInputData);
 	case ({wInputData[0],wInputData[5]})
 	  2'b00 :
 	    begin
-	       case ({wInputData[4],wInputData[3],wInputData[2],wInputData[1]})
+	       case ({wInputData[1],wInputData[2],wInputData[3],wInputData[4]})
 		 4'h0: wOutputData <= 4'hF;
 		 4'h1: wOutputData <= 4'h1;
 		 4'h2: wOutputData <= 4'h8;
@@ -34,12 +34,12 @@ module S2Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'h5;
 		 4'hF: wOutputData <= 4'hA;
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case ({wInputData[4],wInputData[3],wInputData[2],wInputData[1]})
+	       endcase // case ({wInputData[1],wInputData[2],wInputData[3],wInputData[4]})
 	    end // case: 2'b00
 
 	  2'b01 :
 	    begin
-	       case ({wInputData[4],wInputData[3],wInputData[2],wInputData[1]})
+	       case ({wInputData[1],wInputData[2],wInputData[3],wInputData[4]})
 		 4'h0: wOutputData <= 4'h3;
 		 4'h1: wOutputData <= 4'hD;
 		 4'h2: wOutputData <= 4'h4;
@@ -57,12 +57,12 @@ module S2Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'hB;
 		 4'hF: wOutputData <= 4'h5;
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case ({wInputData[4],wInputData[3],wInputData[2],wInputData[1]})
+	       endcase // case ({wInputData[1],wInputData[2],wInputData[3],wInputData[4]})
 	    end // case: 2'b01
 	  
 	  2'b10 :
 	    begin
-	       case ({wInputData[4],wInputData[3],wInputData[2],wInputData[1]})
+	       case ({wInputData[1],wInputData[2],wInputData[3],wInputData[4]})
 		 4'h0: wOutputData <= 4'h0;
 		 4'h1: wOutputData <= 4'hE;
 		 4'h2: wOutputData <= 4'h7;
@@ -80,12 +80,12 @@ module S2Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'h2;
 		 4'hF: wOutputData <= 4'hF;	    
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case ({wInputData[4],wInputData[3],wInputData[2],wInputData[1]})
+	       endcase // case ({wInputData[1],wInputData[2],wInputData[3],wInputData[4]})
 	    end // case: 2'b10
 
 	  2'b11 :
 	    begin
-	       case ({wInputData[4],wInputData[3],wInputData[2],wInputData[1]})
+	       case ({wInputData[1],wInputData[2],wInputData[3],wInputData[4]})
 		 4'h0: wOutputData <= 4'hD;
 		 4'h1: wOutputData <= 4'h8;
 		 4'h2: wOutputData <= 4'hA;
@@ -103,7 +103,7 @@ module S2Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'hE;
 		 4'hF: wOutputData <= 4'h9;
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case ({wInputData[4],wInputData[3],wInputData[2],wInputData[1]})
+	       endcase // case ({wInputData[1],wInputData[2],wInputData[3],wInputData[4]})
 	    end // case: 2'b11
 	endcase // case ({wInputData[5],wInputData[0]})
      end // always @ *
