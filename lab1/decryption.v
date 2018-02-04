@@ -75,7 +75,7 @@ module Decryption(plainText,cipherText,key);
    RoundOperation round4( wRound4Out,wRound5Out,wKey4);
    RoundOperation round3( wRound3Out,wRound4Out,wKey3);
    RoundOperation round2( wRound2Out,wRound3Out,wKey2);
-   RoundOperation round1( wRound1Out,wRound2Out,wKey2);
+   RoundOperation round1( wRound1Out,wRound2Out,wKey1);
    InitialPermutation perm(plainText,wRound1Out);   
 endmodule // Decryption
 
