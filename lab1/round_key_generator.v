@@ -61,8 +61,7 @@ module RoundKeyGenerator(roundKey1,
    wire [55:0] 	     wShiftedRoundKey15;
    wire [55:0] 	     wShiftedRoundKey16;
    
-   integer 	     i;
-   
+  
    //keyexpansion permutation1
    KeyExpansionPermChoice1 key_pc_init(wPC1Key,key);
    
