@@ -107,52 +107,52 @@ module RoundKeyGenerator(roundKey1,
 always @*
 begin	
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey1 <= {wPC1Key[30:56],wPC1Key[29],wPC1Key[2:28],wPC1Key[1]};
+    wShiftedRoundKey1 <= {wPC1Key[2:28],wPC1Key[1],wPC1Key[30:56],wPC1Key[29]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey2 <= {wShiftedRoundKey1[30:56],wShiftedRoundKey1[29],wShiftedRoundKey1[2:28],wShiftedRoundKey1[1]};
+    wShiftedRoundKey2 <= {wShiftedRoundKey1[2:28],wShiftedRoundKey1[1],wShiftedRoundKey1[30:56],wShiftedRoundKey1[29]};
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey3 <= {wShiftedRoundKey2[31:56],wShiftedRoundKey2[29:30],wShiftedRoundKey2[3:28],wShiftedRoundKey2[1:2]};
+    wShiftedRoundKey3 <= {wShiftedRoundKey2[3:28],wShiftedRoundKey2[1:2],wShiftedRoundKey2[31:56],wShiftedRoundKey2[29:30]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey4 <= {wShiftedRoundKey3[31:56],wShiftedRoundKey3[29:30],wShiftedRoundKey3[3:28],wShiftedRoundKey3[1:2]};
+    wShiftedRoundKey4 <= {wShiftedRoundKey3[3:28],wShiftedRoundKey3[1:2],wShiftedRoundKey3[31:56],wShiftedRoundKey3[29:30]};
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey5 <= {wShiftedRoundKey4[31:56],wShiftedRoundKey4[29:30],wShiftedRoundKey4[3:28],wShiftedRoundKey4[1:2]};
+    wShiftedRoundKey5 <= {wShiftedRoundKey4[3:28],wShiftedRoundKey4[1:2],wShiftedRoundKey4[31:56],wShiftedRoundKey4[29:30]};
     //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey6 <= {wShiftedRoundKey5[31:56],wShiftedRoundKey5[29:30],wShiftedRoundKey5[3:28],wShiftedRoundKey5[1:2]};
+    wShiftedRoundKey6 <= {wShiftedRoundKey5[3:28],wShiftedRoundKey5[1:2],wShiftedRoundKey5[31:56],wShiftedRoundKey5[29:30]};
 
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey7 <= {wShiftedRoundKey6[31:56],wShiftedRoundKey6[29:30],wShiftedRoundKey6[3:28],wShiftedRoundKey6[1:2]};
+    wShiftedRoundKey7 <= {wShiftedRoundKey6[3:28],wShiftedRoundKey6[1:2],wShiftedRoundKey6[31:56],wShiftedRoundKey6[29:30]};
   
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey8 <= {wShiftedRoundKey7[31:56],wShiftedRoundKey7[29:30],wShiftedRoundKey7[3:28],wShiftedRoundKey7[1:2]};
+    wShiftedRoundKey8 <= {wShiftedRoundKey7[3:28],wShiftedRoundKey7[1:2],wShiftedRoundKey7[31:56],wShiftedRoundKey7[29:30]};
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey9 <= {wShiftedRoundKey8[30:56],wShiftedRoundKey8[29],wShiftedRoundKey8[2:28],wShiftedRoundKey8[1]};
+    wShiftedRoundKey9 <= {wShiftedRoundKey8[2:28],wShiftedRoundKey8[1],wShiftedRoundKey8[30:56],wShiftedRoundKey8[29]};
   
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey10 <= {wShiftedRoundKey9[31:56],wShiftedRoundKey9[29:30],wShiftedRoundKey9[3:28],wShiftedRoundKey9[1:2]};
+    wShiftedRoundKey10 <= {wShiftedRoundKey9[3:28],wShiftedRoundKey9[1:2],wShiftedRoundKey9[31:56],wShiftedRoundKey9[29:30]};
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey11 <= {wShiftedRoundKey10[31:56],wShiftedRoundKey10[29:30],wShiftedRoundKey10[3:28],wShiftedRoundKey10[1:2]};
+    wShiftedRoundKey11 <= {wShiftedRoundKey10[3:28],wShiftedRoundKey10[1:2],wShiftedRoundKey10[31:56],wShiftedRoundKey10[29:30]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey12 <= {wShiftedRoundKey11[31:56],wShiftedRoundKey11[29:30],wShiftedRoundKey11[3:28],wShiftedRoundKey11[1:2]};
+    wShiftedRoundKey12 <= {wShiftedRoundKey11[3:28],wShiftedRoundKey11[1:2],wShiftedRoundKey11[31:56],wShiftedRoundKey11[29:30]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey13 <= {wShiftedRoundKey12[31:56],wShiftedRoundKey12[29:30],wShiftedRoundKey12[3:28],wShiftedRoundKey12[1:2]};
+    wShiftedRoundKey13 <= {wShiftedRoundKey12[3:28],wShiftedRoundKey12[1:2],wShiftedRoundKey12[31:56],wShiftedRoundKey12[29:30]};
 
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey14 <= {wShiftedRoundKey13[31:56],wShiftedRoundKey13[29:30],wShiftedRoundKey13[3:28],wShiftedRoundKey13[1:2]};
+    wShiftedRoundKey14 <= {wShiftedRoundKey13[3:28],wShiftedRoundKey13[1:2],wShiftedRoundKey13[31:56],wShiftedRoundKey13[29:30]};
 
    //Shift operations by 1 for 1 2 9 16 else 2 
     wShiftedRoundKey15 <= {wShiftedRoundKey14[31:56],wShiftedRoundKey14[29:30],wShiftedRoundKey14[3:28],wShiftedRoundKey14[1:2]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey16 <= {wShiftedRoundKey15[30:56],wShiftedRoundKey15[29],wShiftedRoundKey15[2:28],wShiftedRoundKey15[1]};
+    wShiftedRoundKey16 <= {wShiftedRoundKey15[2:28],wShiftedRoundKey15[1],wShiftedRoundKey15[30:56],wShiftedRoundKey15[29]};
    end
 endmodule // RoundKeyGenerator
 
