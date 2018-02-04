@@ -56,19 +56,34 @@ module DESTestBench_v;
 		// Initialize Inputs
 		passed = 0;
 		
-		// Program 1
+		// Encryption 1
 		#10;
 		key=64'h133457799BBCDFF1;
 		plainText=64'h0123456789ABCDEF;
 		#50
-		passTest(cipherText, 64'h85E813540F0AB405, "Results of Encryption 1", passed);
-		
+		passTest(cipherText, 64'h85E813540F0AB405, "Results of Encryption 1", passed);		
 		#50;
-
-		passTest(plainTextAfterDecryption, 64'h0123456789ABCDEF, "Results of Decryption 1", passed);
-		
+		passTest(plainTextAfterDecryption, 64'h0123456789ABCDEF, "Results of Decryption 1", passed);		
 		#50;
-		allPassed(passed, 2);
+		// Encryption 2
+		#10;
+		key=64'h5B5A57676A56676E;
+		plainText=64'h675A69675E5A6B5A;
+		#50
+		passTest(cipherText, 64'h974AFFBF86022D1F, "Results of Encryption 2", passed);		
+		#50;
+		passTest(plainTextAfterDecryption, 64'h675A69675E5A6B5A, "Results of Decryption 2", passed);		
+		#50;	
+		// Encryption 3
+		#10;
+		key=64'h1111111111111111;
+		plainText=64'hBABECAFEDEADBEEF;
+		#50
+		passTest(cipherText, 64'hC63E2381D4395069, "Results of Encryption 3", passed);		
+		#50;
+		passTest(plainTextAfterDecryption, 64'hBABECAFEDEADBEEF, "Results of Decryption 3", passed);		
+		#50;		
+		allPassed(passed, 6);
 		$finish;
 	end
 	
