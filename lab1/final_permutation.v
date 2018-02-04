@@ -19,8 +19,6 @@ assign rOutputData[5] = wInputData[56];
 assign rOutputData[6] = wInputData[24];
 assign rOutputData[7] = wInputData[64];
 assign rOutputData[8] = wInputData[32];
-
- 
 assign rOutputData[9] = wInputData[39];
 assign rOutputData[10] = wInputData[7];
 assign rOutputData[11] = wInputData[47];
@@ -46,7 +44,6 @@ assign rOutputData[30] = wInputData[21];
 assign rOutputData[31] = wInputData[61];
 assign rOutputData[32] = wInputData[29];
 assign rOutputData[33] = wInputData[36];
- 
 assign rOutputData[34] = wInputData[4];
 assign rOutputData[35] = wInputData[44];
 assign rOutputData[36] = wInputData[12];
@@ -72,7 +69,6 @@ assign rOutputData[55] = wInputData[58];
 assign rOutputData[56] = wInputData[26];
 assign rOutputData[57] = wInputData[33];
 assign rOutputData[58] = wInputData[1];
- 
 assign rOutputData[59] = wInputData[41];
 assign rOutputData[60] = wInputData[9];
 assign rOutputData[61] = wInputData[49];
