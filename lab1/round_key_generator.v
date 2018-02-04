@@ -149,7 +149,7 @@ begin
     wShiftedRoundKey14 <= {wShiftedRoundKey13[3:28],wShiftedRoundKey13[1:2],wShiftedRoundKey13[31:56],wShiftedRoundKey13[29:30]};
 
    //Shift operations by 1 for 1 2 9 16 else 2 
-    wShiftedRoundKey15 <= {wShiftedRoundKey14[31:56],wShiftedRoundKey14[29:30],wShiftedRoundKey14[3:28],wShiftedRoundKey14[1:2]};
+    wShiftedRoundKey15 <= {wShiftedRoundKey14[3:28],wShiftedRoundKey14[1:2],wShiftedRoundKey14[31:56],wShiftedRoundKey14[29:30]};
  
    //Shift operations by 1 for 1 2 9 16 else 2 
     wShiftedRoundKey16 <= {wShiftedRoundKey15[2:28],wShiftedRoundKey15[1],wShiftedRoundKey15[30:56],wShiftedRoundKey15[29]};
