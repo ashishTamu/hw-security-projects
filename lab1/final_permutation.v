@@ -77,6 +77,6 @@ module FinalPermutation (rOutputData,wInputData);
  rOutputData[62] <= wInputData[17];
  rOutputData[63] <= wInputData[57];
  rOutputData[64] <= wInputData[25];
-	
+	end
 endmodule // FinalPermutation
 
