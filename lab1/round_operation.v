@@ -11,11 +11,11 @@ module RoundOperation(wOutputData,wInputData,wKey);
    output reg [1:64] wOutputData;
    wire [1:32] 	      wFeistelOut;
    
-	FeistelNetwork fn(wFeistelOut, wInputData[1:32],wKey);
+	FeistelNetwork fn(wFeistelOut, wInputData[33:64],wKey);
 always @*
 begin
-	 wOutputData[33:64] <= wInputData[1:32];
-	 wOutputData[1:32] <= wFeistelOut^wInputData[63:32];
+	 wOutputData[1:32] <= wInputData[33:64];
+	 wOutputData[33:64] <= wFeistelOut^wInputData[1:32];
   end
    
 endmodule // RoundOperation
