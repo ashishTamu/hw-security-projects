@@ -1,9 +1,9 @@
 module KeyExpansionPermChoice1(wOutputData, wInputData);
 
    //input is 32 bit
-   input wire [31:0] wInputData ;
+   input wire [64:1] wInputData ;
    //output is 32 bit
-   output wire [31:0] wOutputData ;
+   output wire [56:1] wOutputData ;
    
    
 assign wOutputData[1] = wInputData[57];
