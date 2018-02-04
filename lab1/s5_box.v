@@ -14,7 +14,7 @@ module S5Box(wOutputData, wInputData);
 	case ({wInputData[0],wInputData[5]})
 	  2'b00 :
 	    begin
-	       case (wInputData[1:4])
+	       case (wInputData[4:1])
 		 4'h0: wOutputData <= 4'h2;
 		 4'h1: wOutputData <= 4'hC;
 		 4'h2: wOutputData <= 4'h4;
@@ -32,12 +32,12 @@ module S5Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'hE;
 		 4'hF: wOutputData <= 4'h9;
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case (wInputData[1:4])
+	       endcase // case (wInputData[4:1])
 	    end // case: 2'b00
 
 	  2'b01 :
 	    begin
-	       case (wInputData[1:4])
+	       case (wInputData[4:1])
 		 4'h0: wOutputData <= 4'hE;
 		 4'h1: wOutputData <= 4'hB;
 		 4'h2: wOutputData <= 4'h2;
@@ -55,12 +55,12 @@ module S5Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'h8;
 		 4'hF: wOutputData <= 4'h6;
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case (wInputData[1:4])	  
+	       endcase // case (wInputData[4:1])	  
 	    end // case: 2'b01
 	  
 	  2'b10 :
 	    begin
-	       case (wInputData[1:4])
+	       case (wInputData[4:1])
 		 4'h0: wOutputData <= 4'h4;
 		 4'h1: wOutputData <= 4'h2;
 		 4'h2: wOutputData <= 4'h1;
@@ -78,12 +78,12 @@ module S5Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'h0;
 		 4'hF: wOutputData <= 4'hE;	    
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case (wInputData[1:4])	  
+	       endcase // case (wInputData[4:1])	  
 	    end // case: 2'b10
 
 	  2'b11 :
 	    begin
-	       case (wInputData[1:4])
+	       case (wInputData[4:1])
 		 4'h0: wOutputData <= 4'hB;
 		 4'h1: wOutputData <= 4'h8;
 		 4'h2: wOutputData <= 4'hC;
@@ -101,7 +101,7 @@ module S5Box(wOutputData, wInputData);
 		 4'hE: wOutputData <= 4'h5;
 		 4'hF: wOutputData <= 4'h3;
 		 default: wOutputData <= 4'hx;//x
-	       endcase // case (wInputData[1:4])
+	       endcase // case (wInputData[4:1])
 	    end // case: 2'b11
 	endcase // case ({wInputData[5],wInputData[0]})
      end // always @ *
