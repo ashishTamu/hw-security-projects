@@ -42,22 +42,22 @@ module Decryption(plainText,cipherText,key);
    ///always @*
 	//begin
    FinalPermutation inverse_perm(wInitialPermOut,cipherText);
-   RoundKeyGenerator rkg(wKey1,
-			 wKey2,
-			 wKey3,
-			 wKey4,
-			 wKey5,
-			 wKey6,
-			 wKey7,
-			 wKey8,
-			 wKey9,
-			 wKey10,
-			 wKey11,
-			 wKey12,
-			 wKey13,
-			 wKey14,
+   RoundKeyGenerator rkg(wKey16,
 			 wKey15,
-			 wKey16,
+			 wKey14,
+			 wKey13,
+			 wKey12,
+			 wKey11,
+			 wKey10,
+			 wKey9,
+			 wKey8,
+			 wKey7,
+			 wKey6,
+			 wKey5,
+			 wKey4,
+			 wKey3,
+			 wKey2,
+			 wKey1,			
 			 key
 			 );
    RoundOperation round16( wRound16Out,wInitialPermOut,wKey16);
