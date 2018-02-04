@@ -4,12 +4,14 @@
  * output is based on lookup table
  */
 
-module FinalPermutation (rOutputData,wInputData);
+module FinalPermutation (rOutputData,InputData);
    //input is 64 bit
-   input wire [1:64] wInputData ;
+   input wire [1:64] InputData ;
    //output is 64 bit
    output reg  [1:64] rOutputData ;
-   
+   wire [1:64] wInputData;
+	assign wInputData={InputData[33:64],InputData[1:32]};
+	
    always @*
    begin
    //Look up table
