@@ -39,43 +39,42 @@ module Decryption(plainText,cipherText,key);
    wire [1:48] 	     wKey15;
    wire [1:48] 	     wKey16;
    
-   ///always @*
-	//begin
-   FinalPermutation inverse_perm(wInitialPermOut,cipherText);
-   RoundKeyGenerator rkg(wKey16,
-			 wKey15,
-			 wKey14,
-			 wKey13,
-			 wKey12,
-			 wKey11,
-			 wKey10,
-			 wKey9,
-			 wKey8,
-			 wKey7,
-			 wKey6,
-			 wKey5,
-			 wKey4,
-			 wKey3,
+   
+   InitialPermutation initial_perm(wInitialPermOut,cipherText);
+   RoundKeyGenerator rkg(wKey1,
 			 wKey2,
-			 wKey1,			
+			 wKey3,
+			 wKey4,
+			 wKey5,
+			 wKey6,
+			 wKey7,
+			 wKey8,
+			 wKey9,
+			 wKey10,
+			 wKey11,
+			 wKey12,
+			 wKey13,
+			 wKey14,
+			 wKey15,
+			 wKey16,
 			 key
 			 );
-   RoundOperation round16( wRound16Out,wInitialPermOut,wKey16);
-   RoundOperation round15( wRound15Out,wRound16Out,wKey15);
-   RoundOperation round14( wRound14Out,wRound15Out,wKey14);
-   RoundOperation round13( wRound13Out,wRound14Out,wKey13);
-   RoundOperation round12( wRound12Out,wRound13Out,wKey12);
-   RoundOperation round11( wRound11Out,wRound12Out,wKey11);
-   RoundOperation round10( wRound10Out,wRound11Out,wKey10);
-   RoundOperation round9( wRound9Out,wRound10Out,wKey9);
-   RoundOperation round8( wRound8Out,wRound9Out,wKey8);
-   RoundOperation round7( wRound7Out,wRound8Out,wKey7);
-   RoundOperation round6( wRound6Out,wRound7Out,wKey6);
-   RoundOperation round5( wRound5Out,wRound6Out,wKey5);
-   RoundOperation round4( wRound4Out,wRound5Out,wKey4);
-   RoundOperation round3( wRound3Out,wRound4Out,wKey3);
-   RoundOperation round2( wRound2Out,wRound3Out,wKey2);
-   RoundOperation round1( wRound1Out,wRound2Out,wKey1);
-   InitialPermutation perm(plainText,wRound1Out);   
+   RoundOperation round1( wRound1Out,wInitialPermOut,wKey16);
+   RoundOperation round2( wRound2Out,wRound1Out,wKey15);
+   RoundOperation round3( wRound3Out,wRound2Out,wKey14);
+   RoundOperation round4( wRound4Out,wRound3Out,wKey13);
+   RoundOperation round5( wRound5Out,wRound4Out,wKey12);
+   RoundOperation round6( wRound6Out,wRound5Out,wKey11);
+   RoundOperation round7( wRound7Out,wRound6Out,wKey10);
+   RoundOperation round8( wRound8Out,wRound7Out,wKey9);
+   RoundOperation round9( wRound9Out,wRound8Out,wKey8);
+   RoundOperation round10( wRound10Out,wRound9Out,wKey7);
+   RoundOperation round11( wRound11Out,wRound10Out,wKey6);
+   RoundOperation round12( wRound12Out,wRound11Out,wKey5);
+   RoundOperation round13( wRound13Out,wRound12Out,wKey4);
+   RoundOperation round14( wRound14Out,wRound13Out,wKey3);
+   RoundOperation round15( wRound15Out,wRound14Out,wKey2);
+   RoundOperation round16( wRound16Out,wRound15Out,wKey1);
+   FinalPermutation final_perm(plainText,wRound16Out);  
 endmodule // Decryption
 
