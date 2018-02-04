@@ -31,7 +31,7 @@ module DESTestBench_v;
 
 
 	// Outputs
-	wire [63:0] plainTextAfterDecryption;
+	
 	wire [63:0] cipherText;
 
 	//book keeping
