@@ -25,7 +25,6 @@ module RoundKeyGenerator(roundKey1,
 			 );
    
    output wire [47:0] roundKey1;
-   output wire [47:0] roundKey1;
    output wire [47:0] roundKey2;
    output wire [47:0] roundKey3;
    output wire [47:0] roundKey4;
