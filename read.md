@@ -1,1 +1,2 @@
-lab/projects for HW security course - Collboration from Divya, Ashish and Abhinav.
+Lab1 contains verilog implementation of DES algorithm
+ScanAttack: Has VHDL implementation of DES algorith with some modification related to Scan /JTAG implementation.
